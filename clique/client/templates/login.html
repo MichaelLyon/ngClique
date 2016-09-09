@@ -1,7 +1,7 @@
 
 
 <ion-view>
-  <ion-content class="login" delegate-handle="chatScroll" >
+  <ion-content class="login" delegate-handle="chatScroll" ng-controller='LoginCtrl'>
     <script>
       // This is called with the results from from FB.getLoginStatus().
       function statusChangeCallback(response) {
@@ -49,7 +49,7 @@
       function getFriends(userId){
         console.log(userId);
         FB.api(
-            `/${userId}`,
+            `/${userId}/friends`,
             function (response) {
               if (response && !response.error) {
                 console.log(response);
@@ -60,7 +60,7 @@
     </script>
 
     <!-- FACEBOOK login button -->
-    <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+    <fb:login-button scope="public_profile,email,user_friends" onlogin="checkLoginState();">
     </fb:login-button>
 
     <!-- DISPLAYS STATUS TODO: Delete This LATER -->

@@ -1,0 +1,20 @@
+<ion-view>
+  <ion-nav-title>
+     <span class="navTitle">Clique</span><img class ="logoSmall" src="/img/cliqueLogo.png">
+   </ion-nav-title>
+        <ion-content class="foo padding-top">
+          <label id="foo" class="chatSearch item item-input">
+            <i class="icon ion-search placeholder-icon"></i>
+            <input type="search" placeholder="Search Chats">
+          </label>
+          <a href="#/chat"><button class="chatsButton button button-full button-dark">View Chats</button></a>
+        </ion-content>
+        <div class="bar bar-footer bar-dark">
+          <a class="footer" href="#/profile"><button class="footer button button-clear">Profile</button></a>
+          <i class="iconSize icon ion-ios-person-outline"></i>
+          <button class="footer button button-clear">Settings</button>
+          <i class="iconSize icon ion-ios-cog-outline"></i>
+          <button ng-click="logOut()" class="footer button button-clear">Logout</button>
+          <i class="iconSize icon ion-sad-outline"></i>
+        </div>
+</ion-view>
